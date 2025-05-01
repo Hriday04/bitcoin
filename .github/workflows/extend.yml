@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y build-essential
 
       - name: Build project (C89)
-        run: make CFLAGS="-std=c89 -Wall"
+        run: make
 
       - name: Run BTCinC
         run: ./btcinc
