@@ -1,12 +1,9 @@
-
 CC = gcc
 CFLAGS = -std=c89 -Wall -Iinclude
-
 SRC = $(wildcard src/*.c)
 OBJ = $(SRC:.c=.o)
-
-btcinc: $(SRC)
-	$(CC) $(CFLAGS) -o btcinc $(SRC)
-
+TARGET = btcinc
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
 clean:
-	rm -f btcinc
+	rm -f $(TARGET)
